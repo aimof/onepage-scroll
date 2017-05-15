@@ -139,7 +139,7 @@
         pos = (index * 100) * -1;
       }
       if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
-      current.removeClass("active")
+      current.removeClass("active");
       next.addClass("active");
       if(settings.pagination == true) {
         $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
@@ -147,7 +147,7 @@
       }
 
       $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
-      $("body").addClass("viewing-page-"+next.data("index"))
+      $("body").addClass("viewing-page-"+next.data("index"));
 
       if (history.replaceState && settings.updateURL == true) {
         var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index + 1);
